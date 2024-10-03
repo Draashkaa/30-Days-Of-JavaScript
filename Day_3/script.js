@@ -1,3 +1,4 @@
+//LEVEL 1
 //1
 let firstName = 'Gordon';
 let lastName = 'Freeman';
@@ -53,3 +54,120 @@ console.log(new Date().getDay())
 console.log(new Date().getHours())
 console.log(new Date().getMinutes())
 console.log(new Date().getTime())
+
+//LEVEL 2
+let i = prompt ('Введите номер задания: ','')
+switch(i){
+case('1'):
+    //1
+    var b = prompt("Write b :", 0);
+    var h = prompt("Write h :", 0);
+    console.log("S = ",(0.5*(Math.abs(b)*Math.abs(h))));
+    break
+case('2'):
+    //2
+    var a = prompt("Write a :", 0);
+    b = prompt("Write b :", 0);
+    var c = prompt("Write b :", 0);
+    console.log(Number(Math.abs(a))+Number(Math.abs(b))+Number(Math.abs(c)));
+    break
+case('3'):    
+    //3
+    a = prompt("Write a :", 0);
+    b = prompt("Write b :", 0);
+    console.log("S = ",(Math.abs(a)*Math.abs(b)));
+    console.log("P = ",2*(Number(Math.abs(a))+Number(Math.abs(b))));
+    break
+case('4'):
+    //4
+    var r = prompt("Write r :", 0);
+    console.log("S = ",Math.abs(r)*Math.PI);
+    break
+case('5'):
+    //5
+    var x = prompt("Write x :", 0);
+    var y = 2*x-2;
+    console.log(`${x}\t${y}`);
+    break
+case('6'): 
+    //6
+    var x1 = 2;
+    var y1 = 2;
+    var x2 = 6
+    var y2 = 10;
+    console.log((y2-y1)/(x2-x1));
+    break
+case('7'):
+    //7
+    x1 = 2;
+    y1 = 2;
+    x2 = 6;
+    y2 = 10;
+    let _x1 = prompt("Write x1 :", 0);
+    let _x2 = prompt("Write x2 :", 0);
+    let _y1 = 2*_x1-2;
+    let _y2 = 2*_x2-2;
+    (_y2-_y1)/(_x2-_x1) > (y2-y1)/(x2-x1) 
+    ? console.log(`m1 больше`) : 
+    console.log(`m2 больше`);
+    break
+case('8'):
+    //8
+    x = prompt("Write x :", 0);
+    a = 1;
+    b = 6;
+    c = 9;
+    y = a*x**2+b*x+c;
+    let D = b**2 - 4*a*c;
+    let a1 = (-b - Math.sqrt(D))/2*a;
+    let a2 = (-b + Math.sqrt(D))/2*a;
+    console.log(y);
+    console.log(a1,a2);
+    break
+case('9'):
+    //9
+    a = prompt('Enter hours: ');
+    b = prompt('Enter rate per hour: ');
+    console.log(a*b);
+    break
+case('10'):
+    //10
+    a = prompt('say my name(haisenberg): ');
+    a.length > 7 ? console.log(`you're goddamn right!'`) : console.log(`noy`);
+    break
+case('11'):
+    //11
+    a = prompt('Fristname: ');
+    b = prompt('Lastname: ');
+    a.length > b.length ? console.log(`Your first name, ${a} is longer than your family name, ${b}`) : console.log(`Your lastname name, ${b} is longer than your family firstname, ${a}`);
+    break
+case('12'):
+    //12
+    let myAge = 250;
+    let yourAge = 25;
+    console.log(`I am ${myAge-yourAge} years older than you.`);
+    break
+case('13'):
+    //13
+    let year = prompt("Enter your age: ", new Date().getFullYear());
+if (year > new Date().getFullYear()-18 ){
+    a = new Date().getFullYear()-year;
+    alert(`You ${a} years. You are left with ${18-a} years to drive.`);
+} else {
+    alert('You are old enough to drive.');
+}
+    break
+case('14'):
+    //14
+    let age = prompt("Enter your age: ", 100);
+    console.log(age*365*24*60*60)
+    break
+case('15'):
+    //15
+    console.log(`${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()}  ${new Date().getHours()}:${new Date().getMinutes()}`);
+    console.log(`${new Date().getDate()}-${new Date().getMonth()+1}-${new Date().getFullYear()}  ${new Date().getHours()}:${new Date().getMinutes()}`);
+    console.log(`${new Date().getDate()}/${new Date().getMonth()+1}/${new Date().getFullYear()}  ${new Date().getHours()}:${new Date().getMinutes()}`);
+case('16'):
+    //LEVEL 3
+    //1
+    console.log(`${new Date().getFullYear()}-${new Date().getMonth()+1}-${new Date().getDate()}  ${new Date().getHours()>12 ? String(new Date().getHours()-12).length < 2 ? `0${new Date().getHours()-12}` : new Date().getHours()-12 : new Date().getHours()}:${new Date().getMinutes()<10 ? `0new Date().getMinutes()`: new Date().getMinutes()}`);}
